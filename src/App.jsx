@@ -2,13 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Globe, Code2, Cpu, Boxes, Rocket, Phone } from "lucide-react";
 
-/**
- * Anantachai Portfolio – single-file React + Tailwind component
- * - Clean, modern, mobile-first
- * - Sections: Hero, About, Skills, Projects, Experience, Contact
- * - Smooth in-page navigation
- */
-
 const navItems = [
   { id: "home", label: "Home" },
   { id: "about", label: "About" },
@@ -26,9 +19,6 @@ const skills = {
   "AI & Robotics": ["OpenCV", "TensorFlow Lite", "STM32Cube.AI", "Embedded Systems"],
 };
 
-// ----------------------
-// Projects from resume
-// ----------------------
 const projects = [
     {
     title: "Thome Inspector – Production Website",
@@ -214,7 +204,7 @@ const Hero = () => (
         className="space-y-6"
       >
         <div className="inline-flex items-center gap-2 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 text-xs ring-1 ring-emerald-500/20">
-          <span>Computer Engineering • Software & QA</span>
+          <span>Computer Engineering •</span>
         </div>
         <h1 className="text-3xl md:text-4xl font-semibold leading-tight">
           สวัสดีครับ, ผม <span className="underline decoration-emerald-400">อนันธชัย จานเจือ</span>
@@ -273,7 +263,7 @@ const Hero = () => (
               <img
                     src="/Anan.jpg"
                     alt="Anantachai"
-                    className="w-32 h-32 rounded-full object-cover mx-auto shadow-lg"
+                    className="w-80 h-80 rounded-full object-cover mx-auto shadow-lg"
                   />
               <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-300">
                 Anantachai Jarnjuea
@@ -310,21 +300,28 @@ const About = () => (
       </div>
       <div className="lg:col-span-2 grid sm:grid-cols-2 gap-6">
         <Card>
-          <h3 className="font-medium">จุดเด่น</h3>
-          <ul className="mt-3 list-disc list-inside text-sm text-neutral-600 dark:text-neutral-300 space-y-1">
-            <li>เข้าใจทั้งฝั่ง Backend, Web, QA/Testing และ DevOps ระดับเริ่มถึงกลาง</li>
-            <li>เคย Deploy ระบบใช้งานจริง (Docker, Cloud, Domain/SSL)</li>
-            <li>ทำงานเป็นทีม แบ่งงานชัดเจน รับผิดชอบงานตัวเองให้จบตามกำหนด</li>
-          </ul>
-        </Card>
+        <h3 className="font-medium">จุดเด่น</h3>
+        <ul className="mt-3 list-disc list-inside text-sm text-neutral-600 dark:text-neutral-300 space-y-1">
+          <li>เข้าใจทั้ง Backend, Frontend, Database, QA/Testing และ DevOps ระดับเริ่ม–กลาง</li>
+          <li>มีประสบการณ์ Deploy ระบบจริง (Docker, Nginx, Cloud VPS, Oracle Cloud, Domain/SSL)</li>
+          <li>ทำ API/Service ได้เป็นระบบ พร้อมออกแบบฐานข้อมูลและจัดการ Migration</li>
+          <li>แก้บั๊กและ Debug เก่ง โดยเฉพาะปัญหาเชิงระบบ (Server, Docker, Network, SQL)</li>
+          <li>ทำงานเป็นทีมได้ดี แบ่งงานชัดเจน และรับผิดชอบงานให้เสร็จตรงเวลา</li>
+          <li>เรียนรู้ไว สามารถศึกษาเทคโนโลยีใหม่และนำไปใช้ได้ทันทีในโปรเจกต์จริง</li>
+        </ul>
+      </Card>
         <Card>
-          <h3 className="font-medium">สิ่งที่กำลังพัฒนา</h3>
-          <ul className="mt-3 list-disc list-inside text-sm text-neutral-600 dark:text-neutral-300 space-y-1">
-            <li>ออกแบบระบบให้ Scale ได้ และใช้แนวคิด Clean Architecture</li>
-            <li>เขียนเทสต์เชิงลึก (E2E, Load Test, รวมเข้ากับ CI/CD)</li>
-            <li>ต่อยอดทักษะ AI/Automation มาใช้ช่วยงานด้าน QA และ Backend</li>
-          </ul>
-        </Card>
+        <h3 className="font-medium">สิ่งที่กำลังพัฒนา</h3>
+        <ul className="mt-3 list-disc list-inside text-sm text-neutral-600 dark:text-neutral-300 space-y-1">
+          <li>ออกแบบระบบให้ Scale ได้ และใช้แนวคิด Clean Architecture / DDD</li>
+          <li>เรียนรู้การเขียนเทสต์เชิงลึก (Unit, Integration, E2E, Load Test) ผสาน CI/CD</li>
+          <li>เพิ่มความเข้าใจด้าน System Design และ Distributed Systems</li>
+          <li>ต่อยอดทักษะ AI/Automation เพื่อช่วยงาน QA, วิเคราะห์ Log และตรวจสอบคุณภาพระบบ</li>
+          <li>พัฒนาทักษะ Frontend ให้แข็งขึ้น (React, Tailwind, State Management)</li>
+          <li>พัฒนาด้าน Infrastructure (Docker Compose, Reverse Proxy, Scaling, Monitoring)</li>
+        </ul>
+      </Card>
+
       </div>
     </div>
   </Section>
@@ -473,7 +470,6 @@ const Contact = () => (
           </div>
         </div>
       </div>
-      {/* ถ้าภายหลังอยากเพิ่มฟอร์มติดต่อ สามารถใส่ในคอลัมน์ขวาตรงนี้ได้ */}
     </div>
   </Section>
 );
